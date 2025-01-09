@@ -1,0 +1,17 @@
+﻿@model List<Joke> 
+
+<h2>Search Results</h2>
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var joke in Model)
+        {
+            <li>@joke.JokeQuestion - @joke.JokeAnswer</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No jokes found matching your search.</p>
+}
